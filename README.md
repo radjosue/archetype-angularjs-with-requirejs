@@ -1,0 +1,1 @@
+# archetype-angularjs-with-requirejs
