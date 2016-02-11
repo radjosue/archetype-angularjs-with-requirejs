@@ -1,0 +1,14 @@
+doctype html
+html(lang="es")
+	head
+		title {{pageTitle}}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", type="text/css", href="bower_components/bootstrap/dist/css/bootstrap.min.css")
+	body(ng-controller="indexController")
+		section(ng-include="'views/main/menu.html'")
+		section(ng-include="'views/main/header.html'")
+		section.container
+			#views-content(ng-view)
+		section(ng-include="'views/main/footer.html'")
+	script(src="bower_components/requirejs/require.js", data-main="app/main")

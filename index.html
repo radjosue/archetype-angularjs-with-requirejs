@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>{{pageTitle}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body ng-controller="indexController">
+    <section ng-include="'views/main/menu.html'"></section>
+    <section ng-include="'views/main/header.html'"></section>
+    <section class="container">
+      <div id="views-content" ng-view></div>
+    </section>
+    <section ng-include="'views/main/footer.html'"></section>
+  </body>
+  <script src="bower_components/requirejs/require.js" data-main="app/main"></script>
+</html>
