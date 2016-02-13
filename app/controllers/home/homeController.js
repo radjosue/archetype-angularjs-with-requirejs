@@ -15,6 +15,24 @@ define(['modules/app', 'services/requestService'], function(app)
     		$scope.goIndex = function() {
 		 		$location.url("/");
 		 	}
+
+		 	$scope.listaFrutas = [
+				{ nombre : 'Manzanas' },
+				{ nombre : 'Peras' },
+				{ nombre : 'Zanahorias' }
+			];
+
+			$scope.agregarFruta = function(){
+				$scope.listaFrutas.push({
+					nombre: $scope.fruta
+				});
+
+				 $scope.fruta = '';
+			}
+
+			$scope.eliminarFruta = function(){
+				$scope.listaFrutas.pop();
+			}
     	}
     ]);
 

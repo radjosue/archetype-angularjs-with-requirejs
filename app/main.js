@@ -11,12 +11,14 @@
 require.config({
     baseUrl: './app',
     paths: {
-        'angular'           : '../bower_components/angular/angular',
-        'angular-resource'  : '../bower_components/angular-resource/angular-resource',
-        'angular-route'     : '../bower_components/angular-route/angular-route',
-        'jquery'            : '../bower_components/jquery/dist/jquery',
-        'jquery-ui'         : '../bower_components/jquery-ui/jquery-ui',
-        'ngStorage'         : '../bower_components/ngstorage/ngStorage'    },
+        'angular'           : '../bower_components/angular/angular.min',
+        'angular-resource'  : '../bower_components/angular-resource/angular-resource.min',
+        'angular-route'     : '../bower_components/angular-route/angular-route.min',
+        'jquery'            : '../bower_components/jquery/dist/jquery.min',
+        'jquery-ui'         : '../bower_components/jquery-ui/jquery-ui.min',
+        'ngStorage'         : '../bower_components/ngstorage/ngStorage.min',
+        'ngAnimate'         : '../bower_components/angular-animate/angular-animate.min'
+    },
     shim : {
         'angular' : {
             'exports' : 'angular'
@@ -36,6 +38,10 @@ require.config({
         },
         'ngStorage' : {
             'deps' : [ 'angular' ]
+        },
+        'ngAnimate' : {
+            'exports' : 'ngAnimate',
+            'deps' : [ 'angular' ]  
         }
     }
 });
@@ -50,7 +56,8 @@ require(
         'directives/utilsDirectives',
         'ngStorage',
         'jquery',
-        'jquery-ui'
+        'jquery-ui',
+        'ngAnimate'
     ], 
     function(angular, mappingService)
     {
