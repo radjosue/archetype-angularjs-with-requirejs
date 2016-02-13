@@ -1,2 +1,5 @@
 #Se ignora la carpeta 'bower_components/' ya que las librerias las debe de descargar cada usuario en su maquina
 bower_components/
+
+#Se ignora el archivo de configuracion de 'prepros'
+prepros.cfg
