@@ -8,8 +8,7 @@ define(['modules/app', 'controllers/home/homeController'], function(app)
 {
 	return app.config([
 		'$routeProvider', 'routeResolverProvider',
-		function($routeProvider, routeResolverProvider
-			)
+		function($routeProvider, routeResolverProvider)
 		{
 			/* PATHS DONDE ESTAN LOS CONTROLLERS Y LAS VISTAS */
 			var PATHS = {

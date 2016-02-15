@@ -19,7 +19,24 @@ define(['modules/app', 'services/requestService'], function(app)
 		 	$scope.listaFrutas = [
 				{ nombre : 'Manzanas' },
 				{ nombre : 'Peras' },
-				{ nombre : 'Zanahorias' }
+				{ nombre : 'Zanahorias' },
+				{ nombre : 'Manzanas' },
+				{ nombre : 'Peras' },
+				{ nombre : 'Zanahorias' },
+				{ nombre : 'Manzanas' },
+				{ nombre : 'Peras' },
+				{ nombre : 'Zanahorias' },
+				{ nombre : 'Manzanas' },
+				{ nombre : 'Peras' },
+				{ nombre : 'Zanahorias' },
+				{ nombre : 'Manzanas' },
+				{ nombre : 'Peras' },
+				{ nombre : 'Zanahorias' },
+				{ nombre : 'Manzanas' },
+				{ nombre : 'Peras' },
+				{ nombre : 'Zanahorias' },
+				{ nombre : 'Manzanas' },
+				{ nombre : 'Peras' }
 			];
 
 			$scope.agregarFruta = function(){
