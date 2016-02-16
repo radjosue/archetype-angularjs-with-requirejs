@@ -50,6 +50,11 @@ define(['modules/app', 'services/requestService'], function(app)
 			$scope.eliminarFruta = function(){
 				$scope.listaFrutas.pop();
 			}
+
+			$scope.showModal = false;
+		    $scope.toggleModal = function(){
+		        $scope.showModal = !$scope.showModal;
+		    };
     	}
     ]);
 

@@ -35,19 +35,19 @@
 	//Inicia el modal
 	.form-group
 		.text-center
-			h2.text-center Modal
-			button(ng-click="showModal()").btn.btn-primary Mostrar modal
-			modal(visible="false", title='Modal de prueba')#modal
-				.form-group
-					alert(type="info", show="true", dismissable="true").text-left.
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				.form-group
-					button.btn.btn-danger Close
+			h2 Modal
+			button(ng-click="toggleModal()").btn.btn-primary Mostrar modal
+		modal(visible="showModal", title='Modal de prueba')#modal
+			.form-group
+				alert(type="info", show="true", dismissable="false").text-left.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			.form-group.text-right
+				button(ng-click="toggleModal()").btn.btn-danger Close
 	//Inicia el panel
 	.form-group
 		.text-center
