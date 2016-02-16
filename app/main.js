@@ -1,9 +1,9 @@
 /**
- * @author <Josue Ramirez Davila>
- * @mail <josueramirezdavila@gmail.com>
+ * @author      : <Josue Ramirez Davila>
+ * @mail        : <josueramirezdavila@gmail.com>
  *
- * @description ARCHIVO DE CONFIGURACION PRINCIPAL
- *              PARA LA APLICACION EN ANGULAR
+ * @description : ARCHIVO DE CONFIGURACION PRINCIPAL
+ *                PARA LA APLICACION EN ANGULAR
  * 
  */
 
