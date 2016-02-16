@@ -22,6 +22,7 @@
       <button ng-click="goIndex()" class="btn btn-primary">Ir al Index</button>
     </div>
   </div>
+  <!--Inicia el paginador-->
   <div class="form-group">
     <div class="text-center">
       <h2 class="text-center">Paginador</h2>
@@ -32,7 +33,6 @@
       <button ng-click="eliminarFruta()" class="btn btn-danger">Eliminar</button>
     </div>
   </div>
-  <!--Inicia el paginador-->
   <div class="form-group">
     <div class="table-responsive">
       <table class="table table-hover table-condensed table-striped">
@@ -46,10 +46,12 @@
       <dir-pagination-controls></dir-pagination-controls>
     </div>
   </div>
+  <!--Inicia el modal-->
   <div class="form-group">
     <div class="text-center">
+      <h2 class="text-center">Modal</h2>
       <button ng-click="showModal()" class="btn btn-primary">Mostrar modal</button>
-      <modal visible="true" title="Modal de prueba" id="modal">
+      <modal visible="false" title="Modal de prueba" id="modal">
         <div class="form-group">
           <alert type="info" show="true" dismissable="true" class="text-left">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -65,5 +67,42 @@
         </div>
       </modal>
     </div>
+  </div>
+  <!--Inicia el panel-->
+  <div class="form-group">
+    <div class="text-center">
+      <h2 class="text-center">Panel</h2>
+    </div>
+    <panel title="Titulo del panel" type="default" footer="Pie del panel">
+      <alert type="info" show="true" dismissable="true">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </alert>
+    </panel>
+  </div>
+  <!--Inicia el callout-->
+  <div class="form-group">
+    <div class="text-center">
+      <h2 class="text-center">Callouts</h2>
+    </div>
+    <callout type="danger">
+      <h3 class="text-danger">Callout</h3>
+      <alert type="warning" show="true" dismissable="true">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </alert>
+    </callout>
   </div>
 </div>

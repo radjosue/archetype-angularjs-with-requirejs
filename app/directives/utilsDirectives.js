@@ -18,8 +18,8 @@ define(['modules/app'], function(app) {
   /* FIN CONSTANTES COMUNES DE LOS ALERTS */
 
   /**
-   * @author <Josue Ramirez Davila>
-   * @mail <josueramirezdavila@gmail.com>
+   * @author              : <Josue Ramirez Davila>
+   * @mail                : <josueramirezdavila@gmail.com>
    *
    * @description         : CONSTRUYE UN ALERT BOOTSTRAP
    * @param showAttribute : Nombre del modelo con el cual se estara mostrando u ocultando el alert
@@ -37,9 +37,9 @@ define(['modules/app'], function(app) {
     return template;
   }
 
-  /**
-   * @author <Josue Ramirez Davila>
-   * @mail <josueramirezdavila@gmail.com>
+ /**
+   * @author            : <Josue Ramirez Davila>
+   * @mail              : <josueramirezdavila@gmail.com>
    *
    * @description       : CONSTRUYE UN ALERT BOOTSTRAP
    * @attr show         : Nombre del modelo con el cual se estara mostrando u ocultando el alert
@@ -58,8 +58,8 @@ define(['modules/app'], function(app) {
   });
 
 	/**
-   * @author <Josue Ramirez Davila>
-   * @mail <josueramirezdavila@gmail.com>
+   * @author            : <Josue Ramirez Davila>
+   * @mail              : <josueramirezdavila@gmail.com>
    *
    * @description       : CONSTRUYE UN ALERT BOOTSTRAP TIPO DANGER
    * @attr show         : Nombre del modelo con el cual se estara mostrando u ocultando el alert
@@ -77,8 +77,8 @@ define(['modules/app'], function(app) {
 	});
 
   /**
-   * @author <Josue Ramirez Davila>
-   * @mail <josueramirezdavila@gmail.com>
+   * @author            : <Josue Ramirez Davila>
+   * @mail              : <josueramirezdavila@gmail.com>
    *
    * @description       : CONSTRUYE UN ALERT BOOTSTRAP TIPO WARNING
    * @attr show         : Nombre del modelo con el cual se estara mostrando u ocultando el alert
@@ -96,8 +96,8 @@ define(['modules/app'], function(app) {
   });
 
   /**
-   * @author <Josue Ramirez Davila>
-   * @mail <josueramirezdavila@gmail.com>
+   * @author            : <Josue Ramirez Davila>
+   * @mail              : <josueramirezdavila@gmail.com>
    *
    * @description       : CONSTRUYE UN ALERT BOOTSTRAP TIPO INFO
    * @attr show         : Nombre del modelo con el cual se estara mostrando u ocultando el alert
@@ -115,8 +115,8 @@ define(['modules/app'], function(app) {
   });
 
 	/**
-   * @author <Josue Ramirez Davila>
-   * @mail <josueramirezdavila@gmail.com>
+   * @author            : <Josue Ramirez Davila>
+   * @mail              : <josueramirezdavila@gmail.com>
    *
    * @description       : CONSTRUYE UN ALERT BOOTSTRAP TIPO SUCCESS
    * @attr show         : Nombre del modelo con el cual se estara mostrando u ocultando el alert
@@ -180,5 +180,50 @@ define(['modules/app'], function(app) {
         });
       }
     };
+  });
+
+  /**
+   * @author          : <Josue Ramirez Davila>
+   * @mail            : <josueramirezdavila@gmail.com>
+   *
+   * @description     : CONSTRUYE UN PANEL BOOTSTRAP
+   * @attr title      : Titulo del panel
+   * @attr type       : Tipo de panel que se quiere construir (danger, warning, info, success, primary, default)
+   * @attr footer     : Titulo del pie del panel
+   *
+   */
+  app.directive('panel', function () {
+    return {
+      restrict: 'E',
+      transclude: true,
+      template : function(element, attr) {
+        var template = '<div class="panel panel-' + attr.type + '">'
+                        + '<div class="panel-heading"> <h3 class="panel-title">' + attr.title + '</h3> </div>'
+                        + '<div class="panel-body" ng-transclude></div>';
+        if (attr.footer != undefined && attr.footer != '') {
+          template += '<div class="panel-footer">' + attr.footer + '</div>'
+        }
+        template +=  '</div>';
+        return template;
+      }
+    }
+  });
+
+  /**
+   * @author          : <Josue Ramirez Davila>
+   * @mail            : <josueramirezdavila@gmail.com>
+   *
+   * @description     : CONSTRUYE UN BS-CALLOUT BOOTSTRAP
+   * @attr type       : Tipo de callout que se quiere construir (danger, warning, info, success, primary, default)
+   *
+   */
+  app.directive('callout', function () {
+    return {
+      restrict: 'E',
+      transclude: true,
+      template : function(element, attr) {
+        return '<div class="bs-callout bs-callout-' + attr.type + '"><div ng-transclude></div></div>';
+      }
+    }
   });
 });
