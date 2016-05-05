@@ -21,7 +21,8 @@ require.config({
         'angularUtils-dirPagination'    : '../bower_components/angularUtils-pagination/dirPagination',
         'angularUtils-uiBreadcrumbs'    : '../bower_components/angular-utils-ui-breadcrumbs/uiBreadcrumbs',
         'bootstrap'                     : '../bower_components/bootstrap/dist/js/bootstrap.min',
-        'angular-bootstrap'             : '../bower_components/angular-bootstrap/ui-bootstrap-tpls'
+        'angular-bootstrap'             : '../bower_components/angular-bootstrap/ui-bootstrap-tpls',
+        'angular-ui-routes'             : '../bower_components/angular-ui-router/release/angular-ui-router.min'
     },
     shim : {
         'angular' : {
@@ -47,11 +48,14 @@ require.config({
             'exports' : 'ngAnimate',
             'deps' : [ 'angular' ]
         },
+        'angular-ui-routes' : {
+            'deps' : [ 'angular' ]
+        },
         'angularUtils-dirPagination' : {
             'deps' : [ 'angular' ]
         },
         'angularUtils-uiBreadcrumbs' : {
-            'deps' : [ 'angular' ]
+            'deps' : [ 'angular-ui-routes' ]
         },
         'bootstrap': {
             exports: 'bootstrap',
@@ -78,7 +82,8 @@ require(
         'ngStorage',
         'ngAnimate',
         'angularUtils-dirPagination',
-        'angularUtils-uiBreadcrumbs'
+        'angularUtils-uiBreadcrumbs',
+        'routes/breadCrumbs'
     ], 
     function(angular, mappingService)
     {

@@ -17,7 +17,7 @@ define(['angular'], function(angular)
 
         this.routeConfig = function () {
             var viewsDirectory = './views/', // Ruta donde se encuentran las vistas
-                controllersDirectory = "app/controllers/", // Ruta donde se encuentran los controladores
+                controllersDirectory = "./app/controllers/", // Ruta donde se encuentran los controladores
 
             setBaseDirectories = function (viewsDir, controllersDir) {
                 viewsDirectory = viewsDir;
@@ -47,6 +47,7 @@ define(['angular'], function(angular)
                 var routeDef = {};
                 routeDef.templateUrl = routeConfig.getViewsDirectory() + path + baseName + '.html';
                 routeDef.controller = baseName + 'Controller';
+                routeDef.controllerUrl = routeConfig.getControllersDirectory() + path + baseName + 'Controller';
                 routeDef.resolve = {
                     load: ['$q', '$rootScope', function ($q, $rootScope) {
                         var dependencies = [routeConfig.getControllersDirectory() + path + baseName + 'Controller.js'];
@@ -76,4 +77,6 @@ define(['angular'], function(angular)
     var servicesApp = angular.module('routeResolverServices', []);
 
     servicesApp.provider('routeResolver', routeResolver);
+
+    return servicesApp;
 });

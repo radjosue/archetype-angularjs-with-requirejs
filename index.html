@@ -10,6 +10,7 @@
   </head>
   <body ng-controller="indexController">
     <section ng-include="'views/main/menu.html'"></section>
+    <ui-breadcrumbs displayname-property="data.displayName" template-url="./bower_components/angular-utils-ui-breadcrumbs/uiBreadcrumbs.tpl.html"></ui-breadcrumbs>
     <section ng-include="'views/main/header.html'"></section>
     <section class="container">
       <div id="views-content" ng-view></div>

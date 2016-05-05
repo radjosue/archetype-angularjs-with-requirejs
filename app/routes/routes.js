@@ -22,6 +22,9 @@ define(['modules/app', 'controllers/home/homeController'], function(app)
 				html       : ".html"
 			}
 
+			// Se setea los paths de controllers y templates
+			routeResolverProvider.routeConfig.setBaseDirectories(PATHS.htmlTemplates, PATHS.controllers);
+
 			// TODO Descomentar cuando ya se inyecten los controladores dinamicamente
 			//var route = routeResolverProvider.route;
 
@@ -37,7 +40,9 @@ define(['modules/app', 'controllers/home/homeController'], function(app)
 					templateUrl : PATHS.htmlTemplates + 'home/home' + SUFIJOS.html
 				})
 			// TODO Asi se haran las rutas cuando ya se inyecten los controladores dinamicamente
-			//.when('/', route.resolve('home', 'home/'))
+			//.when('/', route.resolve('index', 'index/'))
+			//.when('/home', route.resolve('home', 'home/'))
+			;
 		}
 	]);
 });

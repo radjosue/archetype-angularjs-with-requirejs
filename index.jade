@@ -9,6 +9,7 @@ html(lang="es")
 		link(rel="stylesheet", type="text/css", href="assets/css/style.css")
 	body(ng-controller="indexController")
 		section(ng-include="'views/main/menu.html'")
+		ui-breadcrumbs(displayname-property="data.displayName" template-url="./bower_components/angular-utils-ui-breadcrumbs/uiBreadcrumbs.tpl.html")
 		section(ng-include="'views/main/header.html'")
 		section.container
 			#views-content(ng-view)
