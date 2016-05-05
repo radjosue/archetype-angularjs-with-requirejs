@@ -22,7 +22,9 @@ require.config({
         'angularUtils-uiBreadcrumbs'    : '../bower_components/angular-utils-ui-breadcrumbs/uiBreadcrumbs',
         'bootstrap'                     : '../bower_components/bootstrap/dist/js/bootstrap.min',
         'angular-bootstrap'             : '../bower_components/angular-bootstrap/ui-bootstrap-tpls',
-        'angular-ui-routes'             : '../bower_components/angular-ui-router/release/angular-ui-router.min'
+        'angular-ui-routes'             : '../bower_components/angular-ui-router/release/angular-ui-router.min',
+        'angular-block-ui'              : '../bower_components/angular-block-ui/dist/angular-block-ui.min',
+        'angular-ui-notification'       : '../bower_components/angular-ui-notification/dist/angular-ui-notification.min'
     },
     shim : {
         'angular' : {
@@ -64,6 +66,14 @@ require.config({
         'angular-bootstrap': {
             exports: 'angular-bootstrap',
             deps: ['angular', 'bootstrap']
+        },
+        'angular-block-ui': {
+            exports: 'angular-block-ui',
+            deps: ['angular']
+        },
+        'angular-ui-notification' : {
+            exports : 'angular-ui-notification',
+            'deps' : [ 'angular' ]
         }
     }
 });
@@ -83,7 +93,9 @@ require(
         'ngAnimate',
         'angularUtils-dirPagination',
         'angularUtils-uiBreadcrumbs',
-        'routes/breadCrumbs'
+        'routes/breadCrumbs',
+        'angular-block-ui',
+        'angular-ui-notification'
     ], 
     function(angular, mappingService)
     {

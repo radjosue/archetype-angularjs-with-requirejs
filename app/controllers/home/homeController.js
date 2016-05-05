@@ -8,8 +8,8 @@ define(['modules/app', 'services/requestService'], function(app)
 	 * @param $localStorage - PROVEEDOR DE ANGULAR PARA OBTENER INFORMACION DE LA MEMORIA LOCAL
 	 *  
 	 */
-	app.controller('homeController', ['$scope', '$location', 'requestService', '$localStorage',
-		function($scope, $location, requestService, $localStorage)
+	app.controller('homeController', ['$scope', '$location', 'requestService', '$localStorage', 'Notification',
+		function($scope, $location, requestService, $localStorage, Notification)
     	{
 
     		$scope.goIndex = function() {
@@ -55,6 +55,14 @@ define(['modules/app', 'services/requestService'], function(app)
 		    $scope.toggleModal = function(){
 		        $scope.showModal = !$scope.showModal;
 		    };
+
+		    $scope.showNotifications = function()
+		    {
+		    	Notification.error({message: 'Error Bottom Right', positionY: 'bottom', positionX: 'right'});
+		 		Notification.info({message: 'Info notification<br>Some other <b>content</b><br><a href="https://github.com/alexcrack/angular-ui-notification">This is a link</a><br><img src="https://angularjs.org/img/AngularJS-small.png">', title: 'Html content'});
+		 		Notification({message: 'Primary notification', title: 'Primary notification'});
+		 		Notification.success({message: 'Success Bottom Right', positionY: 'bottom', positionX: 'right'});
+		    }
     	}
     ]);
 
