@@ -27,7 +27,7 @@ define(['modules/app'], function(app)
 		        D.body.scrollHeight, D.documentElement.scrollHeight,
 		        D.body.offsetHeight, D.documentElement.offsetHeight,
 		        D.body.clientHeight, D.documentElement.clientHeight
-   			 );
+   			);
 		}
     });
 });
