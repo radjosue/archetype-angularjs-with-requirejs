@@ -40,11 +40,15 @@ define(['modules/app', 'services/requestService'], function(app)
 			];
 
 			$scope.agregarFruta = function(){
-				$scope.listaFrutas.push({
-					nombre: $scope.fruta
-				});
+				if ($scope.fruta.trim() != '')
+				{
+					$scope.listaFrutas.push({
+						nombre: $scope.fruta
+					});
 
-				 $scope.fruta = '';
+				 	$scope.fruta = '';
+				 	Notification.success('Fruta agregada correctamente');
+				}
 			}
 
 			$scope.eliminarFruta = function(){

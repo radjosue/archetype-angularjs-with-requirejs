@@ -9,7 +9,7 @@
 
 define(['modules/app', 'services/mappingService'], function(app)
 {
-	app.service('requestService', ['$http', '$q', 'mappingService', function($http, $q, mappingService)
+	app.service('requestService', ['$rootScope', '$http', '$q', 'mappingService', function($rootScope, $http, $q, mappingService)
 	{
 
 		/**
@@ -22,14 +22,20 @@ define(['modules/app', 'services/mappingService'], function(app)
 		 * @return promis - Se retorna la promesa generada por la petcion
 		 * 
 		 */
-		this.post = function (module, controller, action, params)
+		this.post = function (module, controller, action, params, isBlockUI)
 		{
 			/* DEFINIMOS LA PROMESA */
 			var defer = $q.defer();
 
 			/* OBTENEMOS LA URL DE ACUERDO A LOS PARAMETROS*/
 			var url = mappingService.services[module][controller][action];
-			
+
+			/* VALIDAMOS SI SE REQUIERE BLOQUEAR UI */
+			if (isBlockUI)
+			{
+				$rootScope.startBlockUI();
+			}
+
 			/* EJECUAMOS LA PETICION AJAX MEDIANTE POST */
 			$http.post(url, JSON.stringify(params))
 				.success(function(data)
@@ -55,6 +61,12 @@ define(['modules/app', 'services/mappingService'], function(app)
 					 * , RESOLVEMOS LA PROMESA CON ESTATUS ERRONEA . */
 					defer.reject(data);
 				});
+
+			/* VALIDAMOS SI SE REQUIERE DESBLOQUEAR UI */
+			if (isBlockUI)
+			{
+				$rootScope.stopBlockUI();
+			}
 
 			/* REGRESAMOS A PROMESA YA CON UN ESTATUS DE SOLUCION. */
 			return defer.promise;

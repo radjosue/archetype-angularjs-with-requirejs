@@ -83,6 +83,8 @@ require(
     [
         'angular',
         'routes/routes',
+        'config/appConfig',
+        'config/appRun',
         'jquery',
         'jquery-ui',
         'angular-bootstrap',
