@@ -7,9 +7,18 @@
 define(['modules/app', 'controllers/home/homeController'], function(app)		
 {
 	return app.config([
-		'$routeProvider', 'routeResolverProvider',
-		function($routeProvider, routeResolverProvider)
+		'$routeProvider', 'routeResolverProvider', '$controllerProvider', '$compileProvider', '$filterProvider', '$provide',
+		function($routeProvider, routeResolverProvider, $controllerProvider, $compileProvider, $filterProvider, $provide)
 		{
+			app.register =
+			{
+            	controller 	: $controllerProvider.register,
+                directive 	: $compileProvider.directive,
+                filter 		: $filterProvider.register,
+                factory 	: $provide.factory,
+                service 	: $provide.service
+            };
+
 			/* PATHS DONDE ESTAN LOS CONTROLLERS Y LAS VISTAS */
 			var PATHS = {
 				controllers : "./app/controllers/",
@@ -42,6 +51,9 @@ define(['modules/app', 'controllers/home/homeController'], function(app)
 			// TODO Asi se haran las rutas cuando ya se inyecten los controladores dinamicamente
 			//.when('/', route.resolve('index', 'index/'))
 			//.when('/home', route.resolve('home', 'home/'))
+				.otherwise({
+                    redirectTo: '/'
+                })
 			;
 		}
 	]);
