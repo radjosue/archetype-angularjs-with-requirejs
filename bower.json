@@ -33,6 +33,7 @@
     "angular-utils-ui-breadcrumbs": "^0.2.2",
     "angularUtils-pagination": "angular-utils-pagination#^0.10.0",
     "angular-block-ui": "^0.2.2",
-    "angular-ui-notification": "^0.2.0"
+    "angular-ui-notification": "^0.2.0",
+    "angular-ui-router": "^0.3.1"
   }
 }
