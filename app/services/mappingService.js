@@ -14,7 +14,7 @@ define(['modules/app'], function(app)
 	{
 		/* PREFIJO QUE SE DEBE CONCATENAR AL PRINCIPIO DE CADA MAPEO DE URL */
 		var PATH_REST_SERVICES = "";
-			
+
 		/* SUFIJO QUE SE DEBE CONCATENAR AL FINAL DE CADA MAPEO DE URL */
 		var HTM = ".htm";
 

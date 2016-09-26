@@ -11,26 +11,26 @@ define(['modules/app'], function(app)
 	{
 
 		/* Bloqueamos la aplicacion en lo que se carga la pagina con $routeChangeStart */
-	    $rootScope.$on('$routeChangeStart', function(next, current)
-	    { 
+	  $rootScope.$on('$routeChangeStart', function(next, current)
+	  {
 			$rootScope.startBlockUI();
 		});
 
 	    /* Desbloqueamos la aplicaicon $routeChangeSuccess */
 		$rootScope.$on('$routeChangeSuccess', function(next, current)
-		{ 
+		{
 			$rootScope.stopBlockUI();
 		});
 
 		/* Desbloqueamos la aplicaicon $routeChangeError */
 		$rootScope.$on('$routeChangeError', function(next, current)
-		{ 
+		{
 			$rootScope.stopBlockUI();
 		});
 
 		/* Desbloqueamos la aplicaicon $routeUpdate */
 		$rootScope.$on('$routeUpdate ', function(next, current)
-		{ 
+		{
 			$rootScope.stopBlockUI();
 		});
 
@@ -42,7 +42,7 @@ define(['modules/app'], function(app)
 
 		/* Desbloqueamos la aplicaicon $locationChangeSuccess */
 		$rootScope.$on('$locationChangeSuccess', function(next, current)
-		{ 
+		{
 			$rootScope.stopBlockUI();
 		});
 

@@ -9,10 +9,10 @@ define(['modules/app'], function(app)
 {
 	app.config(function(NotificationProvider) {
 
-		/* Valores configurados por default al componente de Notifications */
+				/* Valores configurados por default al componente de Notifications */
         NotificationProvider.setOptions({
             delay: 3000,
-            startTop: /*getDocHeight() / 2*/20,
+            startTop: getDocHeight() / 2,
             startRight: 10,
             verticalSpacing: 20,
             horizontalSpacing: 20,
@@ -20,14 +20,14 @@ define(['modules/app'], function(app)
             positionY: 'top'
         });
 
-		/* Obtiene el height de la pagina */
+				/* Obtiene el height de la pagina */
         function getDocHeight() {
-    		var D = document;
-    		return Math.max(
-		        D.body.scrollHeight, D.documentElement.scrollHeight,
-		        D.body.offsetHeight, D.documentElement.offsetHeight,
-		        D.body.clientHeight, D.documentElement.clientHeight
-   			);
-		}
+    				var D = document;
+    				return Math.max(
+		        	D.body.scrollHeight, D.documentElement.scrollHeight,
+		        	D.body.offsetHeight, D.documentElement.offsetHeight,
+		        	D.body.clientHeight, D.documentElement.clientHeight
+   				);
+				}
     });
 });

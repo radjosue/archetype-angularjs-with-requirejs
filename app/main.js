@@ -4,34 +4,34 @@
  *
  * @description : ARCHIVO DE CONFIGURACION PRINCIPAL
  *                PARA LA APLICACION EN ANGULAR
- * 
+ *
  */
 
 /* CONFUIGRAMOS LAS DEPENDENCIAS DE ANGULAR */
 require.config({
-    baseUrl: './app',
+    baseUrl: "./app",
     paths: {
-        'angular'                       : '../bower_components/angular/angular.min',
-        'angular-resource'              : '../bower_components/angular-resource/angular-resource.min',
-        'angular-route'                 : '../bower_components/angular-route/angular-route.min',
-        'jquery'                        : '../bower_components/jquery/dist/jquery.min',
-        'jquery-ui'                     : '../bower_components/jquery-ui/jquery-ui.min',
-        'ngStorage'                     : '../bower_components/ngstorage/ngStorage.min',
-        'ngAnimate'                     : '../bower_components/angular-animate/angular-animate.min',
-        'angularUtils-dirPagination'    : '../bower_components/angularUtils-pagination/dirPagination',
-        'angularUtils-uiBreadcrumbs'    : '../bower_components/angular-utils-ui-breadcrumbs/uiBreadcrumbs',
-        'bootstrap'                     : '../bower_components/bootstrap/dist/js/bootstrap.min',
-        'angular-bootstrap'             : '../bower_components/angular-bootstrap/ui-bootstrap-tpls',
-        'angular-ui-routes'             : '../bower_components/angular-ui-router/release/angular-ui-router.min',
-        'angular-block-ui'              : '../bower_components/angular-block-ui/dist/angular-block-ui.min',
-        'angular-ui-notification'       : '../bower_components/angular-ui-notification/dist/angular-ui-notification.min'
+        'angular'                     : '../bower_components/angular/angular.min',
+        'angular-route'               : '../bower_components/angular-route/angular-route.min',
+        'angularAMD'                  : '../bower_components/angularAMD/angularAMD.min',
+        'angular-resource'            : '../bower_components/angular-resource/angular-resource.min',
+        'jquery'                      : '../bower_components/jquery/dist/jquery.min',
+        'jquery-ui'                   : '../bower_components/jquery-ui/jquery-ui.min',
+        'ngStorage'                   : '../bower_components/ngstorage/ngStorage.min',
+        'ngAnimate'                   : '../bower_components/angular-animate/angular-animate.min',
+        'angularUtils-dirPagination'  : '../bower_components/angularUtils-pagination/dirPagination',
+        'angularUtils-uiBreadcrumbs'  : '../bower_components/angular-utils-ui-breadcrumbs/uiBreadcrumbs',
+        'bootstrap'                   : '../bower_components/bootstrap/dist/js/bootstrap.min',
+        'angular-bootstrap'           : '../bower_components/angular-bootstrap/ui-bootstrap-tpls',
+        'angular-ui-routes'           : '../bower_components/angular-ui-router/release/angular-ui-router.min',
+        'angular-block-ui'            : '../bower_components/angular-block-ui/dist/angular-block-ui.min',
+        'angular-ui-notification'     : '../bower_components/angular-ui-notification/dist/angular-ui-notification.min'
     },
-    shim : {
+    shim: {
+        'angularAMD': [ 'angular' ],
+        'angular-route': [ 'angular' ],
         'angular' : {
             'exports' : 'angular'
-        },
-        'angular-route' : {
-            'deps' : [ 'angular' ]
         },
         'angular-resource' : {
             'deps' : [ 'angular' ]
@@ -60,47 +60,39 @@ require.config({
             'deps' : [ 'angular-ui-routes' ]
         },
         'bootstrap': {
-            exports: 'bootstrap',
-            deps: ['jquery' ]
+            'exports': 'bootstrap',
+            'deps': ['jquery' ]
         },
         'angular-bootstrap': {
-            exports: 'angular-bootstrap',
-            deps: ['angular', 'bootstrap']
+            'exports': 'angular-bootstrap',
+            'deps': ['angular', 'bootstrap']
         },
         'angular-block-ui': {
-            exports: 'angular-block-ui',
-            deps: ['angular']
+            'exports': 'angular-block-ui',
+            'deps' : ['angular']
         },
         'angular-ui-notification' : {
-            exports : 'angular-ui-notification',
+            'exports' : 'angular-ui-notification',
             'deps' : [ 'angular' ]
         }
-    }
+    },
+    deps: [
+      'modules/app',
+      'routes/routes',
+      'config/appConfig',
+      'config/appRun',
+      'jquery',
+      'jquery-ui',
+      'angular-bootstrap',
+      'services/requestService',
+      'directives/utilsDirectives',
+      'ngStorage',
+      'ngAnimate',
+      'angularUtils-dirPagination',
+      'angularUtils-uiBreadcrumbs',
+      'routes/breadCrumbs',
+      'angular-block-ui',
+      'angular-ui-notification',
+      'controllers/index/IndexController'
+      ]
 });
-
-/* INCIALIZAMOS LA APLICACION ANGULAR */
-require(
-    [
-        'angular',
-        'routes/routes',
-        'config/appConfig',
-        'config/appRun',
-        'jquery',
-        'jquery-ui',
-        'angular-bootstrap',
-        'services/requestService',
-        'controllers/index/indexController',
-        'directives/utilsDirectives',
-        'ngStorage',
-        'ngAnimate',
-        'angularUtils-dirPagination',
-        'angularUtils-uiBreadcrumbs',
-        'routes/breadCrumbs',
-        'angular-block-ui',
-        'angular-ui-notification'
-    ], 
-    function(angular, mappingService)
-    {
-        return angular.bootstrap(document, ["app"]);
-    }
-);

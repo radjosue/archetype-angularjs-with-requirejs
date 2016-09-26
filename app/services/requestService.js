@@ -20,7 +20,7 @@ define(['modules/app', 'services/mappingService'], function(app)
 		 * @param controller - Controller de JAVA
 		 * @param action - Accion del controller JAVA que se ejecutara
 		 * @return promis - Se retorna la promesa generada por la petcion
-		 * 
+		 *
 		 */
 		this.post = function (module, controller, action, params, isBlockUI)
 		{
@@ -49,7 +49,7 @@ define(['modules/app', 'services/mappingService'], function(app)
 						defer.resolve(data.response);
 					}
 					else
-					{	
+					{
 						/* SI EL CODIGO DE ERROR DEL REST-CONTROLLER
 						 * ES ERRONEO, RESOLVEMOS LA PROMESA CON ESTATUS ERRONEA . */
 						defer.reject(data.response);
@@ -77,7 +77,7 @@ define(['modules/app', 'services/mappingService'], function(app)
  		 * @mail <josueramirezdavila@gmail.com>
 		 * @module Autocomplete
 		 * @description Funcion para realizar las busquedas sencitivas
-		 * 
+		 *
 		 * @param modulo - Modulo|paquete en los RestController de JAVA
 		 * @param controller - Controller de JAVA
 		 * @param action - Accion del controller JAVA que se ejecutara
@@ -85,7 +85,7 @@ define(['modules/app', 'services/mappingService'], function(app)
 		 * @idInput - Id del input al que se le aplicara la funcionalidad del autocompletado
 		 * @minLength - Numero minimo de caracteres en el que se activara el autocompletado
 		 * @successSearchFunction - Funcion que lenara los parametros que necesitamos de la respuesta del Rest
-		 * 
+		 *
 		 * @errorSearchFunction - Funcion que se ejecutara en caso de que el objeto BaseResponseDTO<>
 			 						regrese el codigo de error ERROR (opcional - si no se ocupa una funcion
 			 						mandar null)
@@ -166,7 +166,7 @@ define(['modules/app', 'services/mappingService'], function(app)
 					if (changeFuntion !== null)
 					{
 						changeFuntion();
-					}	
+					}
 				}
 			});
 		};

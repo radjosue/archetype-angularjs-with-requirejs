@@ -6,9 +6,9 @@ define(['modules/app', 'services/requestService'], function(app)
 	 * @param $location - PROVEEDOR DE ANGULAR REQUERIDO PARA REDIRECCIONAR HACIA OTROS TEMPLATES
 	 * @param requestService - SERVICIO NECESARIO PARA PODER LLAMAR LOS SERVICIOS REST-CONTROLLER
 	 * @param $localStorage - PROVEEDOR DE ANGULAR PARA OBTENER INFORMACION DE LA MEMORIA LOCAL
-	 *  
+	 *
 	 */
-	app.controller('homeController', ['$scope', '$location', 'requestService', '$localStorage', 'Notification',
+	app.controller('HomeController', ['$scope', '$location', 'requestService', '$localStorage', 'Notification',
 		function($scope, $location, requestService, $localStorage, Notification)
     	{
 
