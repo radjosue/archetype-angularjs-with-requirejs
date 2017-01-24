@@ -1,0 +1,31 @@
+{
+  "name": "Arquetipo_Angular_AMD",
+  "version": "1.0.0",
+  "description": "Estructura inicial de un proyecto en AngularAMD con RequireJS",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radjosue/archetype-angularjs-with-requirejs.git"
+  },
+  "keywords": [
+    "angular|archetype"
+  ],
+  "author": "Josue Ramirez Davila <josueramirezdavila@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/radjosue/archetype-angularjs-with-requirejs/issues"
+  },
+  "homepage": "https://github.com/radjosue/archetype-angularjs-with-requirejs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-serve": "^1.4.0",
+    "gulp-uglify": "^2.0.0",
+    "run-sequence": "^1.2.2",
+    "yargs": "^6.6.0"
+  }
+}
