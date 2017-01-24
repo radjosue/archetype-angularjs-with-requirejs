@@ -1,5 +1,11 @@
-#Se ignora la carpeta 'bower_components/' ya que las librerias las debe de descargar cada usuario en su maquina
-bower_components/
+#Se ignora la carpeta 'vendors/' ya que las librerias las debe de descargar cada usuario en su maquina
+vendors/
 
 #Se ignora el archivo de configuracion de 'prepros'
 prepros.cfg
+
+#Se ignora la carpeta 'node_modules/' ya que las librerias las debe de descargar cada usuario en su maquina
+node_modules/
+
+#Se ignora la carpeta 'build/' ya que es donde se genera el codigo ya compilado
+build/
