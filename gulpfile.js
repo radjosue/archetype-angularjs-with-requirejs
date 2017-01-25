@@ -96,8 +96,8 @@ gulp.task('vendors', function () {
 /*
 * Configuración de la tarea 'serve-debbug'
 */
-gulp.task('serve-debbug', serve({
-  root: ['dist/debbug'],
+gulp.task('serve-dev', serve({
+  root: ['dist/dev'],
   port: 9888,
 }));
 
