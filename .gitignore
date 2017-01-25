@@ -7,5 +7,5 @@ prepros.cfg
 #Se ignora la carpeta 'node_modules/' ya que las librerias las debe de descargar cada usuario en su maquina
 node_modules/
 
-#Se ignora la carpeta 'build/' ya que es donde se genera el codigo ya compilado
-build/
+#Se ignora la carpeta 'dist/' ya que es donde se genera el codigo ya compilado
+dist/
