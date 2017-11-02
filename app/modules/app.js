@@ -17,7 +17,8 @@
 		'angularUtils-dirPagination',
 		'angularUtils-uiBreadcrumbs',
 		'angular-block-ui',
-		'angular-ui-notification'
+		'angular-ui-notification',
+    'angular-recaptcha'
   ],
   function (angularAMD)
     {
@@ -30,7 +31,8 @@
   				'angularUtils.directives.dirPagination',
   				'angularUtils.directives.uiBreadcrumbs',
   				'blockUI',
-  				'ui-notification'
+  				'ui-notification',
+          'vcRecaptcha'
         ]
       );
     return angularAMD.bootstrap(app);

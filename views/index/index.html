@@ -9,6 +9,14 @@
         En el encontraras la estructura de directorios para estructurar tu proyecto.
       </p>
       <button ng-click="goHome()" class="btn btn-primary">Ir al Home</button>
+      <div
+                vc-recaptcha
+                theme="'light'"
+                key="model.key"
+                on-create="setWidgetId(widgetId)"
+                on-success="setResponse(response)"
+                on-expire="cbExpiration()"
+            ></div>
     </div>
   </div>
 </div>

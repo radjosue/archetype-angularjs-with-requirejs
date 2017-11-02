@@ -25,7 +25,8 @@ require.config({
         'angular-bootstrap'           : '../vendors/angular-bootstrap/ui-bootstrap-tpls',
         'angular-ui-routes'           : '../vendors/angular-ui-router/release/angular-ui-router.min',
         'angular-block-ui'            : '../vendors/angular-block-ui/dist/angular-block-ui.min',
-        'angular-ui-notification'     : '../vendors/angular-ui-notification/dist/angular-ui-notification.min'
+        'angular-ui-notification'     : '../vendors/angular-ui-notification/dist/angular-ui-notification.min',
+        'angular-recaptcha'           : '../vendors/angular-recaptcha/release/angular-recaptcha.min'
     },
     shim: {
         'angularAMD': [ 'angular' ],
@@ -74,6 +75,10 @@ require.config({
         'angular-ui-notification' : {
             'exports' : 'angular-ui-notification',
             'deps' : [ 'angular' ]
+        },
+        'angular-recaptcha' : {
+            'exports' : 'angular-recaptcha',
+            'deps' : [ 'angular', 'jquery' ]
         }
     },
     deps: [
@@ -93,6 +98,7 @@ require.config({
       'routes/breadCrumbs',
       'angular-block-ui',
       'angular-ui-notification',
+      'angular-recaptcha',
       'controllers/index/IndexController'
       ]
 });
